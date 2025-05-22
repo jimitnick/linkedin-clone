@@ -1,0 +1,39 @@
+@import "tailwindcss";
+*{
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+:root,html,body{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+@layer components{
+    .signInButtons{
+        @apply rounded-3xl  w-[50%] h-[45px] cursor-pointer
+    }
+    .small{
+        @apply text-sm top-[-10px] text-gray-400 font-semibold
+    }
+    .menuOptions{
+        @apply flex flex-col items-center justify-center gap-0 cursor-pointer  hover:text-zinc-900
+    }
+    .svg{
+        @apply h-6 w-6 text-zinc-600  hover:text-zinc-900
+    }
+}
+
+.mainDashboard{
+    background-color: #F4F2EE;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.userContent::-webkit-scrollbar{
+    display: none;
+}
+.recommendations::-webkit-scrollbar{
+    display: none;
+}
