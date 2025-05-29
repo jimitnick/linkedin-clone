@@ -3,16 +3,21 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/Login'
 import { signInAPI } from './actions'
 import Dashboard from "./components/Dashboard"
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { getUserAuth } from './actions'
+import { useDispatch } from 'react-redux'
 
-function App(props) {
-  const loginValidation = ()=>{
-    signInAPI();
+function App() {
+  const dispatch = useDispatch()
+  const [user, setUser] = useState({})
+  const loginValidation = async ()=>{
+    // dispatch(signInAPI());
+    const cleanUser = await dispatch(signInAPI());
+    setUser(cleanUser)
   }
   useEffect(() => {
-    getUserAuth();
-  });
+    dispatch(getUserAuth());
+  },[dispatch]);
   return (
     <>
       <div className='min-w-screen min-h-screen'>

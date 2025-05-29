@@ -5,7 +5,7 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDvw0AlQz-35UCzIWN2vcJnlgszz9UAc5Q",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "linkedin-clone-67e33.firebaseapp.com",
   projectId: "linkedin-clone-67e33",
   storageBucket: "linkedin-clone-67e33.appspot.com", // fixed `.app` → `.com`
