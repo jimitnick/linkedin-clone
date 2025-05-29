@@ -2,10 +2,10 @@ import React from 'react'
 import StartPost from './StartPost'
 import Articles from './Articles'
 
-const UserContents = () => {
+const UserContents = (props) => {
   return (
     <div className='userContent w-[600px] overflow-y-auto h-full flex flex-col gap-4'>
-      <StartPost />
+      <StartPost photo = {props.userDets.photoURL}/>
       <div className='w-full h-[30px] flex items-center gap-4'>
         <div className='w-[75%] bg-gray-700 h-[1px]'></div>
         <div className='flex gap-3'>

@@ -15,7 +15,7 @@ const Dashboard = () => {
       <main className="pt-16 h-[calc(100vh-64px)] absolute top-12 flex  items-center justify-center overflow-hidden">
         <div className="flex gap-4 overflow-y-auto h-full">
           <ProfileCard userDets = {user}/>
-          <UserContents />
+          <UserContents userDets = {user}/>
           <LeftSide />
         </div>
       </main>
