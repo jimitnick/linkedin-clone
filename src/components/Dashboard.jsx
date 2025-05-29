@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import NavbarAfterLogin from './NavbarAfterLogin'
 import ProfileCard from './ProfileCard'
 import UserContents from './UserContents'
 import LeftSide from './LeftSide'
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
+  const navigate  = useNavigate();
   const user = useSelector((state) => state.userState.user);
-
+  useEffect(() => {
+    if (!user){
+      navigate("/");
+    }
+  },[user, navigate])
   return (
     <div className='mainDashboard bg-gray-100 min-h-screen w-screen flex flex-col items-center'>
       <NavbarAfterLogin theme = {""} userDets = {user}/>
