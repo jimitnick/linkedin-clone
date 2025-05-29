@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-import LinkedLogo from '../images/linkedinLogo.png'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { HomeIcon, UserGroupIcon,BriefcaseIcon,ChatBubbleLeftEllipsisIcon,BellIcon,ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
 import SquareGrid from '../utils/SquareGrid'
@@ -14,7 +12,7 @@ const NavbarAfterLogin = (props) => {
   return (
     <div className='w-full h-14 flex items-center justify-center gap-36 bg-white fixed'>
       <div className='flex justify-center items-center gap-3'>
-        <img src={props.userDets?.photoURL || LinkedLogo} alt="" className='w-[40px] h-[40px] object-cover cursor-pointer'/>
+        <img src={props.userDets?.photoURL} alt="" className='w-[40px] h-[40px] object-cover cursor-pointer'/>
         <div className='flex items-center rounded-md'>
             <MagnifyingGlassIcon className={`h-7 w-7 ${props.theme === "dark" ? "bg-slate-700 text-white" : "bg-gray-100 text-zinc-900"} h-[40px] px-1`}/>
             <input type="search" name="search" id="search" placeholder='Search' className={`${props.theme === "dark" ? "bg-slate-700 text-white" : "bg-gray-100 text-zinc-900"} xl:w-[250px] h-[40px] rounded-r-md outline-none px-4`}/>
