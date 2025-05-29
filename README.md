@@ -2,6 +2,9 @@
 
 A simple and fast LinkedIn Clone built using **React** and **Vite**. This project is intended for learning and showcasing modern frontend development techniques.
 
+### Link to Live Demo: [Linked Clone](https://linkedin-clone-liart-theta.vercel.app/)
+<br>
+
 ## 🚀 Features
 
 - ⚡ Vite-powered React app for blazing-fast development
