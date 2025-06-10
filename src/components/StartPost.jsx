@@ -30,7 +30,7 @@ const StartPost = (props) => {
                 <span className='text-[15px]'>Write article</span>
               </div>
           </div>
-          <CreatePost Display = {display} setDisplay = {setDisplay} change = {change} setChange = {setChange}/>
+          <CreatePost userDets = {props.userDets} Display = {display} setDisplay = {setDisplay} change = {change} setChange = {setChange}/>
       </div>
     </>
   )
